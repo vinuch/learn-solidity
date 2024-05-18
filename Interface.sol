@@ -7,6 +7,8 @@ interface ICounter {
 }
 
 contract CallInterface {
+    uint public count;
+     
     function examples(address _counter) external {
         ICounter(_counter).inc();
         count = ICounter(_counter).count();
